@@ -6,8 +6,8 @@ from django.utils.html import mark_safe
 
 class ImageInline(SortableInlineAdminMixin, admin.TabularInline):
     model = Image
-    extra = 0
-    fields = ('image', 'position')
+    extra = 1
+    fields = ('image', 'preview', 'position')
     readonly_fields = ('preview',)
 
     def preview(self, obj):
